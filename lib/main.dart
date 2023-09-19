@@ -1,61 +1,15 @@
 import 'package:flutter/material.dart';
-import './question.dart';
+import 'package:quiz_app/Screens/quiz.dart';
 
 void main() {
-  runApp(QuizApp());
+  runApp(const Quiz());
 }
 
-class QuizApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    
-    return QuizAppState();
-  }
-}
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-class QuizAppState extends State<QuizApp> {
-  var index = 0;
-  void answerQuestion() {
-    print("Pressed $index");
-    
-    setState(() {
-      index++;
-    });
-  }
-
-  Widget build(BuildContext context) {
-    var questions = [
-      'What is your favourite color?',
-      'what is your favourite programming language',
-    ];
-
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("QuizApp"),
-        ),
-        body: Column(
-          children: [
-            Question(questions.elementAt(index)),
-            ElevatedButton(
-              onPressed: answerQuestion,
-              child: Text("Answer 1"),
-            ),
-            ElevatedButton(
-              onPressed: answerQuestion,
-              child: Text("Answer 2"),
-            ),
-            ElevatedButton(
-              onPressed: answerQuestion,
-              child: Text("Answer 3"),
-            ),
-            ElevatedButton(
-              onPressed: answerQuestion,
-              child: Text("Answer 4"),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return 
+//   }
+// }
